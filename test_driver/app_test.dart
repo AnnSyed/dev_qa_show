@@ -17,7 +17,31 @@ void main() {
       }
     });
 
+    //Write Successful test
+
+
+//    test('Negative Test Case', () async{
+//      await driver.tap(find.byValueKey('mySignUpButton'));
+//      await driver.tap(find.byValueKey('mySubmitButton'));
+//      await driver.waitFor(find.text('Username required'));
+//    } );
+//
+//    test('Toggle Negative Case', () async{
+//
+//      await driver.tap(find.byValueKey('myUsername'));
+//     // await driver.waitFor(find.text(''));
+//      await driver.enterText('Anum');
+//      await driver.tap(find.byValueKey('myPhoneNumber'));
+//      //await driver.waitFor(find.text(''));
+//      await driver.enterText('0342554454');
+//      await driver.tap(find.byValueKey('mySubmitButton'));
+//      await driver.waitFor(find.text('Please agree to T&C'));
+//
+//    } );
     // Test scripts
+
+
+
 
 
   });
