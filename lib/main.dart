@@ -1,4 +1,3 @@
-import 'package:dev_qa_show/registration.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -74,7 +73,9 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      appBar: AppBar(
+        title: Text('Flutter demo home page'),
+      ),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
@@ -95,29 +96,17 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: RaisedButton(
-                      key: Key('mySignUpButton'),
-                      onPressed: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => RegistrationScreen(),
-                          ),
-                        );
-                      },
-                      child: Text('Sign up'),
-                      shape: StadiumBorder(),
-                    ),
-                  ),
-                ],
-              ),
-            )
+            Text('You have pressed the button this many times:'),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline2,
+            ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: _incrementCounter,
       ),
     );
   }
